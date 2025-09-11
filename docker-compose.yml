@@ -26,6 +26,7 @@ services:
       context: ./
     volumes: 
       - ./:/usr/src/app/
+    command: celery --app=dcelery worker -l INFO
     environment:
       - DEBUG=1
       - SECRET_KEY=very_secure_secert_key682932d@
